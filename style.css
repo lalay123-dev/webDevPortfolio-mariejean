@@ -1,0 +1,651 @@
+
+
+
+img {
+    width: 100%;
+    height: auto; 
+    max-width: 300px; 
+    display: block; 
+    margin: auto; 
+}
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px; 
+    height: 250px; 
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+/* General Home section */
+#Home {
+    background-color: #000000; /* Black background for both dark and light mode */
+    padding: 120px 20px; /* Increased padding for more space */
+    text-align: center;
+    color: #fff; /* White text color for contrast */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+/* Main container for text and image */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; /* Horizontal layout for text and image */
+    gap: 70px; /* Increased gap between text and image */
+}
+
+/* Content styling */
+.content {
+    max-width: 700px; /* Increased max-width of content */
+}
+
+/* Heading styling */
+.content h1 {
+    font-size: 56px; /* Larger font size for heading */
+    font-weight: bold;
+    margin-bottom: 60px; /* Increased margin for better spacing */
+    color: #fff; /* White color for contrast */
+}
+
+/* Paragraph styling */
+.content p {
+    font-size: 26px; /* Increased font size for readability */
+    color: #ddd; /* Light gray color for text */
+    margin-bottom: 40px; /* More spacing below paragraph */
+    line-height: 1.7; /* Increased line height for better readability */
+}
+
+/* Social media links */
+.social-links a {
+    font-size: 50px; /* Larger social media icons */
+    color: #fff; /* White color for icons */
+    margin: 0 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #4b9e3b; /* Green color on hover */
+    transform: scale(1.3); /* Larger hover size */
+}
+
+/* Profile Image Styling */
+/* Profile Image Styling */
+/* Profile Image Styling with Circular Outline */
+.image img {
+    width: 250px; /* Large width for the image */
+    height: 250px; /* Match height with width for a perfect circle */
+    object-fit: cover; /* Ensure the image fits without distortion */
+    border-radius: 50%; /* Make the image circular */
+    border: 5px solid pink; /* Circular pink outline */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.image img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+
+
+
+   
+    
+
+
+
+
+
+/* Light mode styles (still using black background) */
+@media (prefers-color-scheme: light) {
+    #Home {
+        background-color: #000000; /* Black background for light mode */
+        color: #fff; /* White text for contrast in light mode */
+    }
+
+    .content p {
+        color: #ccc; /* Slightly lighter gray text for better readability */
+    }
+
+    .social-links a {
+        color: #fff; /* White icons in light mode */
+    }
+
+    .social-links a:hover {
+        color: #4b9e3b; /* Green color on hover */
+    }
+}
+
+
+
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 30px; 
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px; 
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    min-height: 50vh;
+    background-color: rgb(18, 20, 20);
+    color: rgb(239, 85, 177); 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+body.dark-mode {
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 105, 180);
+}
+
+
+body.light-mode {
+    background-color: rgb(245, 245, 245); 
+    color: rgb(60, 60, 60);
+}
+
+
+.theme-icon {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.theme-icon:hover {
+    opacity: 1.5;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+body.light-mode h1,
+body.light-mode h1 span,
+body.light-mode p,
+body.light-mode .homeinfo {
+    color: rgb(80, 80, 80);
+}
+
+body.light-mode h1 span {
+    color: rgb(255, 105, 180); /* Pink color with glow effect */
+    text-shadow: 0 0 10px rgb(255, 105, 180);
+}
+
+body.light-mode .typewriter {
+    color: rgb(255, 105, 180); /* Pink color */
+}
+
+body.light-mode .typewriter-text {
+    color: rgb(255, 105, 180); /* Hotpink color */
+    text-shadow: 0 0 10px hotpink;
+}
+
+body.light-mode .homeinfo {
+    color: rgb(150, 150, 150); /* Lighter gray text */
+}
+
+body.light-mode .about-text p {
+    color: rgb(150, 150, 150); /* Lighter gray text */
+}
+
+/* Navbar Styles */
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px) brightness(90%);
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background for navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+}
+.first-paragraph {
+    margin-bottom: 10px; /* Space between the two paragraphs */
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-grow: 2;
+}
+
+.logo span {
+    color: pink;
+    text-shadow: 0 0 10px pink;
+}
+
+.toggle-container {
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#theme-toggle-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#theme-toggle-icon:hover {
+    transform: scale(1.1);
+}
+
+.hamburg,
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: pink;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links {
+    display: flex;
+    margin-left: 20px;
+}
+
+.nav-container .links a {
+    font-size: 1.2rem;
+    color: pink;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+    white-space: nowrap;
+}
+
+.nav-container .links a:hover {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.dropdown {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a {
+    display: flex;
+    color: pink;
+    text-decoration: none;
+    padding: 15px 0;
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+    background-color: pink;
+    color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px pink;
+}
+
+section {
+    width: 100%;
+    min-height: 90vh;
+    color: pink;
+    padding: 20px;
+    margin: 0;
+}
+
+section::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.main-container {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+}
+
+.main-container .content {
+    color: pink;
+    width: 40%;
+    min-height: 100px;
+    margin: 20px;
+}
+
+.content h1 span {
+    font-weight: 700;
+    text-shadow: 0 0 10px pink;
+    color: pink;
+}
+
+.content .typewriter span {
+    color: pink;
+    text-shadow: 0 0 10px pink;
+}
+
+.content p {
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+
+:root {
+    --background-dark: #000000;  /* Black background for dark mode */
+    --background-light: #111010; /* Light background for light mode */
+    --text-dark: #ffffff;        /* White text for dark mode */
+    --text-light: #131212;       /* Dark text for light mode */
+    --accent-dark: #ff69b4;      /* Accent color */
+    --accent-light: #ff69b4;     /* Accent color for light mode */
+    --button-dark: #ff69b4;      /* Button color for dark mode */
+    --button-light: #ff69b4;     /* Button color for light mode */
+    --button-hover-dark: #ff1493;/* Hover color for dark mode */
+    --button-hover-light: #ff1493; /* Hover color for light mode */
+    --input-background-dark: #555555; /* Input background for dark mode */
+    --input-background-light: #f1f1f1; /* Input background for light mode */
+    --input-border-dark: #666666;  /* Input border color for dark mode */
+    --input-border-light: #cccccc; /* Input border color for light mode */
+    --form-background-dark: #333333; /* Form background color for dark mode */
+    --form-background-light: #f9f9f9; /* Form background color for light mode */
+}
+
+/* Base styles for body */
+body {
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Default dark mode styles */
+#Contacts {
+    background-color: var(--background-dark);
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+#Contacts h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--accent-dark);
+}
+
+#Contacts p {
+    font-size: 18px;
+    color: var(--accent-dark);
+    margin-bottom: 30px;
+}
+
+#Contacts a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#Contacts a:hover {
+    text-decoration: underline;
+}
+
+.social-media-icons {
+    margin-bottom: 30px;
+}
+
+.social-media-icons a {
+    color: var(--accent-dark);
+    font-size: 35px;
+    margin: 0 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media-icons a:hover {
+    transform: scale(1.1);
+    color: #ff1493;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--form-background-dark);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-container label {
+    font-size: 18px;
+    color: var(--accent-dark);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-container input, 
+.contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--input-border-dark);
+    border-radius: 4px;
+    background-color: var(--input-background-dark);
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+    border-color: var(--accent-dark);
+    outline: none;
+}
+
+.contact-container button {
+    background-color: var(--button-dark);
+    color: var(--text-dark);
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+    background-color: var(--button-hover-dark);
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.notification-content {
+    background-color: var(--background-light);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.notification-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.notification-content .close-btn {
+    background-color: #f44336;
+    color: rgb(15, 15, 15);
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notification-content .close-btn:hover {
+    background-color: #d32f2f;
+}
+
+.content button {
+    background-color: var(--button-dark);
+    color: var(--text-light);
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover {
+    scale: 1.1;
+    color: var(--button-dark);
+    border: 2px solid var(--button-dark);
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px 5px var(--button-dark);
+}
+
+/* Media Query for Light Mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--background-light);
+        color: var(--text-light);
+    }
+
+    #Contacts {
+        background-color: var(--background-light);
+        color: var(--text-light);
+    }
+
+    #Contacts h2, 
+    #Contacts p, 
+    #Contacts a, 
+    .social-media-icons a, 
+    .contact-container label {
+        color: var(--accent-light);
+    }
+
+    .contact-container {
+        background-color: var(--form-background-light);
+    }
+
+    .contact-container input, 
+    .contact-container textarea {
+        background-color: var(--input-background-light);
+        border: 1px solid var(--input-border-light);
+        color: var(--text-light);
+    }
+
+    .contact-container button {
+        background-color: var(--button-light);
+        color: var(--text-light);
+    }
+
+    .contact-container button:hover {
+        background-color: var(--button-hover-light);
+    }
+
+    .content button {
+        background-color: var(--button-light);
+        color: var(--text-dark);
+    }
+
+    .content button:hover {
+        color: var(--button-light);
+        border: 2px solid var(--button-light);
+        box-shadow: 0 0 40px 5px var(--button-light);
+    }
+}
